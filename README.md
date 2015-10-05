@@ -1,0 +1,2 @@
+# Session
+The session class.
