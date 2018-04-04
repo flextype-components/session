@@ -1,3 +1,6 @@
+# v1.0.3, 2018-04-04
+* General fixes
+
 # v1.0.2, 2015-10-26
 * Composer added
 

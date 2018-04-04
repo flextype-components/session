@@ -1,5 +1,7 @@
 <?php
 
+namespace Flextype\Component\Session;
+
 /**
  * This file is part of the Force Components.
  *
