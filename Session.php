@@ -1,25 +1,23 @@
 <?php
 
-namespace Flextype\Component\Session;
-
 /**
- * This file is part of the Force Components.
+ * @package Flextype Components
  *
- * (c) Romanenko Sergey / Awilum <awilum@msn.com>
+ * @author Sergey Romanenko <awilum@yandex.ru>
+ * @link http://components.flextype.org
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
+namespace Flextype\Component\Session;
 
 class Session
 {
     /**
      * Starts the session.
      *
-     *  <code>
-     *      Session::start();
-     *  </code>
-     *
+     * Session::start();
      */
     public static function start()
     {
@@ -37,10 +35,7 @@ class Session
     /**
      * Deletes one or more session variables.
      *
-     *  <code>
-     *      Session::delete('user');
-     *  </code>
-     *
+     * Session::delete('user');
      */
     public static function delete()
     {
@@ -67,10 +62,7 @@ class Session
     /**
      * Destroys the session.
      *
-     *  <code>
-     *      Session::destroy();
-     *  </code>
-     *
+     * Session::destroy();
      */
     public static function destroy()
     {
@@ -85,15 +77,13 @@ class Session
     /**
      * Checks if a session variable exists.
      *
-     *  <code>
-     *      if (Session::exists('user')) {
-     * 			// Do something...
-     *  	}
-     *  </code>
+     * if (Session::exists('user')) {
+     *     // Do something...
+     * }
      *
-     * @return boolean
+     * @return bool
      */
-    public static function exists()
+    public static function exists() : bool
     {
         // Start session if needed
         if (! session_id()) {
@@ -129,22 +119,17 @@ class Session
     /**
      * Gets a variable that was stored in the session.
      *
-     *  <code>
-     *      echo Session::get('user');
-     *  </code>
+     * echo Session::get('user');
      *
      * @param  string $key The key of the variable to get.
      * @return mixed
      */
-    public static function get($key)
+    public static function get(sstring $key)
     {
         // Start session if needed
         if (! session_id()) {
             self::start();
         }
-
-        // Redefine key
-        $key = (string) $key;
 
         // Fetch key
         if (Session::exists((string) $key)) {
@@ -159,17 +144,16 @@ class Session
     /**
      * Returns the sessionID.
      *
-     *  <code>
-     *      echo Session::getSessionId();
-     *  </code>
+     * echo Session::getSessionId();
      *
      * @return string
      */
-    public static function getSessionId()
+    public static function getSessionId() : string
     {
         if (! session_id()) {
             Session::start();
         }
+
         return session_id();
     }
 
@@ -177,14 +161,12 @@ class Session
     /**
      * Stores a variable in the session.
      *
-     *  <code>
-     *      Session::set('user', 'Awilum');
-     *  </code>
+     * Session::set('user', 'Awilum');
      *
      * @param string $key   The key for the variable.
      * @param mixed  $value The value to store.
      */
-    public static function set($key, $value)
+    public static function set(string $key, $value)
     {
         // Start session if needed
         if (! session_id()) {

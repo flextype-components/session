@@ -1,3 +1,6 @@
+# v1.1.0, 2018-04-05
+* PHP7 Support added
+
 # v1.0.3, 2018-04-04
 * General fixes
 

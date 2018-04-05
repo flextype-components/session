@@ -1,5 +1,12 @@
-# Session
-The session class.
+# Session Component
+![version](https://img.shields.io/badge/version-1.1.0-brightgreen.svg?style=flat-square "Version")
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/flextype-components/session/blob/master/LICENSE)
+
+### Installation
+
+```
+composer require flextype-components/session
+```
 
 Start the session.
 ```php
@@ -41,4 +48,4 @@ Session::set('user', 'Awilum');
 
 
 ## License
-See [LICENSE](https://github.com/force-components/Session/blob/master/LICENSE)
+See [LICENSE](https://github.com/flextype-components/session/blob/master/LICENSE)
