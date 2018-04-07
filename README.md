@@ -8,6 +8,8 @@
 composer require flextype-components/session
 ```
 
+### Usage
+
 Start the session.
 ```php
 Session::start();
