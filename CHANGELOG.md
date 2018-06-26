@@ -1,3 +1,6 @@
+# v1.1.1, 2018-06-26
+* typo fixes
+
 # v1.1.0, 2018-04-05
 * PHP7 Support added
 

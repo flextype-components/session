@@ -124,7 +124,7 @@ class Session
      * @param  string $key The key of the variable to get.
      * @return mixed
      */
-    public static function get(sstring $key)
+    public static function get(string $key)
     {
         // Start session if needed
         if (! session_id()) {
